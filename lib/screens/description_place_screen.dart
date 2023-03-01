@@ -4,7 +4,14 @@ import 'package:travel_app5a/screens/review.dart';
 
 //stlesss
 class DescriptionPlaceScreen extends StatelessWidget {
-  const DescriptionPlaceScreen({super.key});
+  final String namePlace;
+  final String descriptionPlace;
+  final int starts;
+  const DescriptionPlaceScreen(
+      {super.key,
+      required this.namePlace,
+      required this.descriptionPlace,
+      required this.starts});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +19,6 @@ class DescriptionPlaceScreen extends StatelessWidget {
       fontSize: 30.0,
       fontWeight: FontWeight.bold,
     );
-
-    const descriptionText =
-        'Anim velit sint commodo adipisicing consequat laborum ullamco mollit in ipsum commodo occaecat nisi. Magna labore proident nostrud dolor sit ullamco. Veniam enim dolor esse fugiat duis proident et eu nisi id adipisicing aliquip laboris et. Dolor eiusmod exercitation labore eu dolore Lorem ad voluptate nisi. Est ut voluptate enim nisi Lorem non aliquip ad culpa enim ea velit elit consequat. \n \n Consequat dolor aliqua esse tempor voluptate cupidatat pariatur ad magna et excepteur adipisicing pariatur minim. Elit ullamco irure ex laborum nulla deserunt quis fugiat culpa ullamco aliquip excepteur dolore eu. Adipisicing excepteur sit labore mollit ex nulla enim irure exercitation nisi culpa non occaecat laborum. Laborum non nostrud tempor duis officia aute culpa anim ut adipisicing consequat. Amet amet eu sint et sit excepteur incididunt irure elit ea aliqua. Laboris esse proident tempor sit';
 
     final star = Container(
       margin: const EdgeInsets.only(
@@ -34,8 +38,8 @@ class DescriptionPlaceScreen extends StatelessWidget {
             left: 20.0,
             right: 20.0,
           ),
-          child: const Text(
-            'Duwili Ella',
+          child: Text(
+            namePlace,
             style: titleStyle,
             textAlign: TextAlign.left,
           ),
@@ -53,7 +57,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
         right: 20.0,
       ),
       child: Text(
-        descriptionText,
+        descriptionPlace,
         style: GoogleFonts.lato(
           textStyle: const TextStyle(
             fontSize: 13,
