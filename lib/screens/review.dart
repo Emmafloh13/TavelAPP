@@ -41,18 +41,34 @@ class Review extends StatelessWidget {
         style: GoogleFonts.lato(fontSize: 17.0, fontWeight: FontWeight.bold),
       ),
     );
+    final star = Container(
+      margin: const EdgeInsets.only(
+        right: 3.0,
+      ),
+      child: const Icon(
+        Icons.star,
+        color: Color.fromARGB(255, 19, 126, 75),
+      ),
+    );
 
     final userInfo = Container(
       margin: EdgeInsets.only(
         left: 20.0,
       ),
-      child: Text(
-        details,
-        textAlign: TextAlign.left,
-        style: GoogleFonts.lato(
-            fontSize: 14.0,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 72, 74, 75)),
+      child: Row(
+        children: [
+          Text(
+            details,
+            textAlign: TextAlign.left,
+            style: GoogleFonts.lato(
+                fontSize: 14.0,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 72, 74, 75)),
+          ),
+          star,
+          star,
+          star,
+        ],
       ),
     );
 
