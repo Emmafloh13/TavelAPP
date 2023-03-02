@@ -47,7 +47,7 @@ class Review extends StatelessWidget {
       ),
       child: const Icon(
         Icons.star,
-        color: Color.fromARGB(255, 19, 126, 75),
+        color: Color.fromARGB(255, 9, 225, 120),
       ),
     );
 
