@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_app5a/screens/button_navigate.dart';
 import 'package:travel_app5a/screens/home_screen.dart';
 import 'package:travel_app5a/screens/profile_screen.dart';
 import 'package:travel_app5a/screens/search_place_screen.dart';
@@ -20,7 +18,7 @@ class _TravelsState extends State<Travels> {
     ProfileScreen(),
   ];
 
-  void onTabTapped(int index) {
+  void onTapTapped(int index) {
     setState(() {
       indexTap = index;
     });
@@ -31,14 +29,14 @@ class _TravelsState extends State<Travels> {
     return Scaffold(
       body: widgetsBarChildren[indexTap],
       bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-          canvasColor: Colors.white,
-          primaryColor: Colors.purpleAccent,
-        ),
-        child: BottomNavigationBar(
+          data: Theme.of(context).copyWith(
+            canvasColor: Colors.white,
+            primaryColor: Colors.purpleAccent,
+          ),
+          child: BottomNavigationBar(
             showSelectedLabels: false,
             showUnselectedLabels: false,
-            onTap: onTabTapped,
+            onTap: onTapTapped,
             currentIndex: indexTap,
             items: const [
               BottomNavigationBarItem(
@@ -53,8 +51,8 @@ class _TravelsState extends State<Travels> {
                 icon: Icon(Icons.person),
                 label: '',
               ),
-            ]),
-      ),
+            ],
+          )),
     );
   }
 }

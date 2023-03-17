@@ -17,10 +17,7 @@ class Review extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final profilePic = Container(
-      margin: const EdgeInsets.only(
-        top: 30,
-        left: 30,
-      ),
+      margin: const EdgeInsets.only(top: 20.0, left: 20.0),
       width: 80.0,
       height: 80.0,
       decoration: BoxDecoration(
@@ -31,16 +28,21 @@ class Review extends StatelessWidget {
         ),
       ),
     );
+
     final userName = Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         left: 20.0,
       ),
       child: Text(
         user,
         textAlign: TextAlign.left,
-        style: GoogleFonts.lato(fontSize: 17.0, fontWeight: FontWeight.bold),
+        style: GoogleFonts.lato(
+          fontSize: 17.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
+
     final star = Container(
       margin: const EdgeInsets.only(
         right: 3.0,
@@ -52,7 +54,7 @@ class Review extends StatelessWidget {
     );
 
     final userInfo = Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         left: 20.0,
       ),
       child: Row(
@@ -61,9 +63,10 @@ class Review extends StatelessWidget {
             details,
             textAlign: TextAlign.left,
             style: GoogleFonts.lato(
-                fontSize: 14.0,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 72, 74, 75)),
+              fontSize: 14.0,
+              fontWeight: FontWeight.bold,
+              color: const Color.fromARGB(255, 72, 74, 74),
+            ),
           ),
           star,
           star,
@@ -72,8 +75,8 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userCommet = Container(
-      margin: EdgeInsets.only(
+    final userComments = Container(
+      margin: const EdgeInsets.only(
         left: 20.0,
       ),
       child: Text(
@@ -81,6 +84,8 @@ class Review extends StatelessWidget {
         textAlign: TextAlign.left,
         style: GoogleFonts.lato(
           fontSize: 14.0,
+          fontWeight: FontWeight.bold,
+          color: const Color.fromARGB(255, 72, 74, 74),
         ),
       ),
     );
@@ -91,7 +96,7 @@ class Review extends StatelessWidget {
       children: [
         userName,
         userInfo,
-        userCommet,
+        userComments,
       ],
     );
 

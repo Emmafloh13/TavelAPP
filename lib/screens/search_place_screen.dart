@@ -7,17 +7,10 @@ class SearchPlaceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(245, 1, 38, 65),
-            Color.fromARGB(229, 17, 226, 174),
-          ],
-        ),
-      ),
+      color: Color.fromARGB(255, 225, 86, 213),
       child: Center(
         child: Text(
-          'Busqueda de lugares',
+          'Búsqueda de lugares interesantes',
           style: GoogleFonts.lato(
             fontSize: 30.0,
             color: Colors.black,

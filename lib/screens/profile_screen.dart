@@ -1,29 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'card_image_list_profile.dart';
+import 'header_profile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(245, 1, 38, 65),
-            Color.fromARGB(229, 17, 226, 174),
-          ],
+    return Stack(
+      children: <Widget>[
+        ListView(
+          children: const <Widget>[],
         ),
-      ),
-      child: Center(
-        child: Text(
-          'Mi perfil',
-          style: GoogleFonts.lato(
-            fontSize: 30.0,
-            color: Colors.black,
-          ),
-        ),
-      ),
+        const HeaderProfile(),
+        const CardImageListProfile(),
+      ],
     );
   }
 }

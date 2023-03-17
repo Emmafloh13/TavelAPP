@@ -25,7 +25,7 @@ class _SmallButtonState extends State<SmallButton> {
       onPressed: onPressedFav,
       backgroundColor: Color.fromARGB(229, 17, 226, 174),
       mini: true,
-      tooltip: 'Fav',
+      tooltip: 'Me gusta',
       child: Icon(pressed ? Icons.favorite : Icons.favorite_border),
     );
   }
